@@ -72,6 +72,7 @@ header .container {
     list-style: none;
     display: flex;
     align-items: center;
+    padding: 0;
 }
 
 .main-nav ul li a {
@@ -257,6 +258,15 @@ header .container {
 }
 
 @media only screen and (max-width: 450px) {
+    .main-nav {
+        flex-direction: column;
+    }
+    .main-nav ul li:not(:last-child) a {
+        padding: 10px;
+    }
+    .main-nav ul li:last-child {
+        display: none;
+    }
     .container {
         max-width: 400px;
     }
@@ -272,5 +282,8 @@ header .container {
     }
     .section-title {
         text-align: center;
+    }
+    .main-nav {
+        padding-top: 15px;
     }
 }
