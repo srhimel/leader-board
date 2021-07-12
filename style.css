@@ -1,0 +1,275 @@
+/*----------------
+  Common Style  
+-----------------*/
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background: #F3F1FF;
+    margin: 0;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-weight: normal;
+}
+
+hr {
+    border: 1px solid #D1D1D1;
+}
+
+.container {
+    max-width: 870px;
+    padding: 30px;
+    border-radius: 5px;
+    margin-top: 21px;
+    box-sizing: border-box;
+}
+
+.bg-white {
+    background: #fff;
+}
+
+/*----------------
+  Header Style  
+-----------------*/
+
+header {
+    background: #562EFF;
+}
+
+header .container {
+    margin-top: 0;
+    margin: auto;
+    padding: 0;
+}
+
+.main-nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.main-nav .logo {
+    display: flex;
+    align-items: center;
+    color: #fff;
+    text-decoration: none;
+    font-size: 24px;
+}
+
+.main-nav .logo img {
+    width: 40px;
+    padding-right: 10px;
+}
+
+.main-nav ul {
+    list-style: none;
+    display: flex;
+    align-items: center;
+}
+
+.main-nav ul li a {
+    text-decoration: none;
+    color: #fff;
+}
+
+.main-nav ul li:not(:last-child) a {
+    padding: 18px;
+}
+
+.main-nav ul li:last-child a {
+    padding-left: 18px;
+}
+
+/*----------------
+  Top Player Style  
+-----------------*/
+
+.top-players {
+    margin-bottom: 30px;
+}
+
+.section-title {
+    font-size: 24px;
+    line-height: 36px;
+    color: #562EFF;
+    margin-top: 3px;
+}
+
+.players {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-row-gap: 29px;
+}
+
+.player {
+    display: flex;
+    align-items: center;
+}
+
+.player img {
+    width: 56px;
+    margin-right: 16px;
+}
+
+.player h3 {
+    font-size: 18px;
+}
+
+/*----------------
+  Top Blog Style  
+-----------------*/
+
+.top-blogs {
+    margin-top: 22px;
+}
+
+.blogs {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-row-gap: 26px;
+    grid-column-gap: 40px;
+}
+
+.blog {
+    display: flex;
+    align-items: center;
+}
+
+.thumbnail img {
+    width: 177px;
+}
+
+.blog-info {
+    margin-left: 16px;
+}
+
+.blog-title {
+    font-size: 20px;
+    line-height: 34px;
+    margin: 0;
+}
+
+.blog-author {
+    margin-top: 0;
+    font-size: 16px;
+    color: #9F9F9F;
+}
+
+.blog-author a {
+    color: #562EFF;
+    text-decoration: none;
+}
+
+/*----------------
+  Course Style  
+-----------------*/
+
+.courses {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-column-gap: 24px;
+    grid-row-gap: 14px;
+}
+
+.course {
+    padding: 11px 13px;
+    box-shadow: 0px 5.34229px 13.3557px rgba(0, 0, 0, 0.05);
+    border-radius: 15px;
+}
+
+.course-title {
+    margin-bottom: 5px;
+    line-height: 30px;
+    font-size: 20px;
+}
+
+.course-thumbnail img {
+    width: 100%;
+}
+
+.course-author {
+    text-decoration: none;
+    color: #ED6B4F;
+    font-size: 14.5px;
+}
+
+.course-info {
+    display: flex;
+    align-items: center;
+    font-size: 14.5px;
+}
+
+.course-info .course-rating {
+    font-size: 12px;
+}
+
+.fas.filled {
+    color: #FFC014;
+    ;
+}
+
+.fas.empty {
+    color: #e7e3e3;
+}
+
+.course-rating-count {
+    margin-left: 10px;
+    color: #A2A2A2;
+}
+
+.course-duration {
+    margin-left: auto;
+    color: #FF4A60;
+    background: #FFE4E8;
+    border-radius: 14.6913px;
+    padding: 5px 8px;
+}
+
+@media only screen and (min-width: 768px) and (max-width: 900px) {
+    .container {
+        width: 750px;
+    }
+    .blogs {
+        grid-template-columns: repeat(1, 1fr);
+    }
+    .courses {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    .container {
+        max-width: 450px;
+    }
+    .blogs, .courses {
+        grid-template-columns: repeat(1, 1fr);
+    }
+    .players {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media only screen and (max-width: 450px) {
+    .container {
+        max-width: 400px;
+    }
+    .blogs, .courses {
+        grid-template-columns: repeat(1, 1fr);
+    }
+    .players {
+        grid-template-columns: repeat(1, 1fr);
+    }
+    .blog, .player {
+        flex-direction: column;
+        text-align: center;
+    }
+    .section-title {
+        text-align: center;
+    }
+}
